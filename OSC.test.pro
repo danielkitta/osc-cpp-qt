@@ -6,10 +6,10 @@ TEMPLATE = app
 DEFINES += BUILD_UNITTESTS
 
 CONFIG(debug, debug|release) {
-    DESTDIR = $$PWD/bin/debug
+    DESTDIR = bin/debug
 }
 CONFIG(release, debug|release) {
-    DESTDIR = $$PWD/bin/release
+    DESTDIR = bin/release
 }
 
 OBJECTS_DIR = $$DESTDIR/tmp/obj/$$TARGET/.obj
@@ -19,7 +19,7 @@ UI_DIR = $$DESTDIR/tmp/ui/$$TARGET/.ui
 
 INCLUDEPATH += $$PWD/gtest/include
 
-LIBS += -L$$PWD/gtest/lib -lgtest -L$$DESTDIR -losc
+LIBS += -Lgtest/lib -lgtest -L$$DESTDIR -losc
 
 SOURCES += \
     unitTests/main.cpp \

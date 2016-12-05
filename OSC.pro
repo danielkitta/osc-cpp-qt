@@ -6,10 +6,10 @@ TEMPLATE = lib
 DEFINES += OSC_EXPORT
 
 CONFIG(debug, debug|release) {
-    DESTDIR = $$PWD/bin/debug
+    DESTDIR = bin/debug
 }
 CONFIG(release, debug|release) {
-    DESTDIR = $$PWD/bin/release
+    DESTDIR = bin/release
 }
 
 OBJECTS_DIR = $$DESTDIR/tmp/obj/$$TARGET/.obj
