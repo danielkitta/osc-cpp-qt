@@ -48,7 +48,7 @@ public:
 	 * @param address
 	 * @return the new message to compose.
 	 */
-	OscMessageComposer* pushMessage(QString& address);
+	OscMessageComposer* pushMessage(const QString& address);
 
 	/**
 	 * Appends a previously built message to the current bundle being composed.

@@ -62,7 +62,7 @@ OscBundleComposer::~OscBundleComposer() {
  * @param address
  * @return the new message to compose.
  */
-OscMessageComposer* OscBundleComposer::pushMessage(QString& address)
+OscMessageComposer* OscBundleComposer::pushMessage(const QString& address)
 {
 	OscMessageComposer* message = new OscMessageComposer(address);
 	mContentList.push_back(message);
